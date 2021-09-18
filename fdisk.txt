@@ -1,0 +1,18 @@
+to show all disk partitions:
+
+fdisk -l 
+
+we can use fdisk on a particular partition to reformat the way the disk 
+has been seperated.
+
+Here is the sequence of events:
+
+1. fdisk <partition>
+2. n (new partition)
+3. select default sizes
+4. When asked about the size configurations, make sure to select the 
+    +-<size>
+5. when done, select t to change the partition type
+   L to list all partition types
+   Enter the partition type number
+

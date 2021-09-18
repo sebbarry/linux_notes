@@ -1,0 +1,36 @@
+ext = extended file system
+
+
+to create a filesystem: 
+"""
+mkfs -t TYPE DEVICE
+"""
+
+mount a file system
+"""
+mount /dev/sdb3 /opt
+"""
+
+
+mount shows physical file systems as well as virtual file systems.
+
+
+to make a mount permanent we need to mount it on /etc/fstab file
+
+to unmount a partition use umount <filesystem> 
+
+
+/etc/fstab file:
+there are 6 fields.
+each of these columns as seperated by a space
+
+1. device
+2. mount point 
+(where the mount point will be deployed)
+3. file system type 
+(same type used to make the file system type used in the mkfs command)
+4. mount options
+5. dump
+6. fsck order
+
+
