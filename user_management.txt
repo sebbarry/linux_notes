@@ -61,3 +61,39 @@ userdel -r username
 usermod 
 ===========================================
 
+
+=============== managing group details ======
+
+group details are found in the /etc/group file
+
+groupname:password:GID:account1, ...accountn
+
+show groups with: groups command 
+groups <groupname>
+
+1. create a group: 
+groupadd <name> 
+2. delete a group: 
+groupdel <name>
+3. modify a group: 
+groupmod [options] <namegroup>
+-g <value> : change the group id  
+-n <group> : rename the group 
+
+
+=========== demo: create groups ==========
+
+#make 3 groups
+groupadd writers 
+groupadd tv
+groupadd movie
+#show the last three lines of the /etc/group file
+tail -3 /etc/group
+#add a user to a particular group
+useradd -c "User A" -g writers -G tv -m -s /bin/bash usr_a
+#give the user a password
+passwd usr_a 
+#make a second user
+useradd -c "User B" -g tv -G writers,movie -m -s /bin/bash usr_b
+passwd usr_b
+
