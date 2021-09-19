@@ -1,15 +1,18 @@
-1. creates extra layers of abstraction between teh disk or storage device presented to a linux file system and the lyaers using those filesystems.
 
-2. create file systems that extend multipe storage devices. we can aggreage file systems into a single logical volume. 
+LVM is a virtualized environment, that aggregates all underlying segmeneted 
+disk space and disk paritions into one single pool of storage.
 
+This serves many different advantages for us. 
+1. We can buy or allocate smaller chunks of disk space into one larger pool of data. 
+
+    4 250G disk drives = 1T of drive. This can be aggregated into a single virtualized volume 
+    group.
+
+2. creating a virtualized environment allows a much more flexible flow of data space. 
 3. we can expand or shrink file systems in real time while the data remains online. 
-
 4. migrate data from one storage device to another while the data is online. 
-
 5. we can replicate and backup data to another file system. 
-
 6. we can create point-in-time snapshots of your filesystems.
-
 
 
 =================================================
@@ -28,16 +31,15 @@ Logical volume layers | (these are created from a volume
 -----------------------
 Volume group (VG)     | (made up of one or more physical 
                         volumes. These are like pools 
-                        or storage) 
+                        or storage that aggregate all physical volume mounts) 
                         vgcreate <vg_name> <pv_name> 
 -----------------------
+Disk partitions       |
+-----------------------
 Physical volumes (PV) | (these are storage deivces used
-                        by the LVM) 
+                        by the machine) 
                         pvcreate <path ie ~ /dev/<name>>
 -----------------------
-Storage devices       |
-----------------------
-Infrastructure
 
 
 
