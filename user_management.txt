@@ -1,0 +1,63 @@
+all users accounts have: 
+1. username
+2. uid (user id)
+3. default group
+4. comments
+5. shell. 
+6. home directory location
+
+All this information is stored in the etc/passwd file
+
+====== etc/passwd file ======
+
+username:password:UID:GID:comments:home_dir:shell
+
+*The first listing in the etc/passwd file is the root account. 
+
+=============================
+
+- we can read passwords from the /etc/shadow file.
+- the root account is always UID 0
+- we can assign users to certain groups to make files.
+- a user is always placed into the home directory.
+
+
+====== etc/shadow file ========
+contains a list of passwords 
+-refer to an online resource for field partitions
+===============================
+
+
+======= creating a user =========
+
+useradd [options] username
+
+-c ('comment')
+-m (create the home directory automatically)
+-s <provide the path to the user's defualt shell.>
+-r to create a system account (used to application and system accounts (think db account))
+-d set the directory of the user manually (commonly when making a system account)
+-g <default group name>
+-G non default project.
+
+useradd -c "sebastian barry" -m -s /bin/bash sebastian (to create a new user)
+passwd sebastian (to enter a password)
+
+=================================
+
+-not every account is meant to be used by a person
+-some accounts are created to run system processes, database processes, and other application processes.
+
+** to create a system or application account make sure to set the shell as:
+- /usr/sbin/nologin 
+this is because we dont want the user to be able to login to the system using taht account.
+
+
+========= delete an account ===========
+userdel -r username
+=======================================
+
+========== change an account ==============
+usermod 
+===========================================
+
