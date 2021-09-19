@@ -70,6 +70,7 @@ groupname:password:GID:account1, ...accountn
 
 show groups with: groups command 
 groups <groupname>
+show a user's group with: groups <user>
 
 1. create a group: 
 groupadd <name> 
@@ -96,4 +97,7 @@ passwd usr_a
 #make a second user
 useradd -c "User B" -g tv -G writers,movie -m -s /bin/bash usr_b
 passwd usr_b
+
+#check who belongs to what group
+grep <gid> /etc/passwd
 
