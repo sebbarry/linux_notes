@@ -2,8 +2,9 @@ to show all disk partitions:
 
 fdisk -l 
 
-we can use fdisk on a particular partition to reformat the way the disk 
-has been seperated.
+- We can use fdisk on a particular partition to reformat the way the disk 
+- Has been seperated. A disk can be partitioned into smaller components to organize data access etc. 
+
 
 Here is the sequence of events:
 
