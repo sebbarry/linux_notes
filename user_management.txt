@@ -61,6 +61,14 @@ userdel -r username
 usermod 
 ===========================================
 
+========= switching accounts ==============
+
+su (switches to sudo account)
+su <username> (switches to particular account)
+
+
+===========================================
+
 
 =============== managing group details ======
 
