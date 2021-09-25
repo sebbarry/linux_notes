@@ -1,2 +1,4 @@
-Just some Linux notes for reference. 
-- sysadmin stuff
+# Just some Linux notes for reference. 
+- sysadmin material. 
+
+
