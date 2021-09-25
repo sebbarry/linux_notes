@@ -29,6 +29,9 @@ the directory from which the command had been entered.
 
 To remove a link, just rm it. 
 
+To find the path to where the linked file should be positioned: 
+readlink -f <linkname>
+
 ====================================
 
 Hard Links: 
