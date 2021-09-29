@@ -6,8 +6,10 @@ The larger partitions are typically associated for use with file storage.
 Other partitions (one) will be dedicated to boot partitions. 
 Partitions take up disk space.
 
-Partitions are held on /dev/<partition device>
-1. Partitions are typically prefixed by vda or sda 
+Partitions are held on /dev/<partition device><partition #>
+(ie: /dev/vda1)
+(ie: /dev/vda2)
+1. Partitions are typically prefixed by vda or sda
 2. Partitions are dividers that split up a disk into smaller chunks.
 
 There are 3 types of partition manipulation techniques/programs we 
