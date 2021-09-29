@@ -1,12 +1,10 @@
 
-LVM is a virtualized environment, that aggregates all underlying segmeneted 
-disk space and disk paritions into one single pool of storage.
+LVM is a virtualized environment, that aggregates all underlying segmeneted disk space and disk paritions into one single pool of storage.
 
 This serves many different advantages for us. 
 1. We can buy or allocate smaller chunks of disk space into one larger pool of data. 
 
-    4 250G disk drives = 1T of drive. This can be aggregated into a single virtualized volume 
-    group.
+ - 4 250G disk drives = 1T of drive. This can be aggregated into a single virtualized volume group.
 
 2. creating a virtualized environment allows a much more flexible flow of data space. 
 3. we can expand or shrink file systems in real time while the data remains online. 
