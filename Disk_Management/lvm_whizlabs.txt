@@ -1,0 +1,38 @@
+This is the second page to the lvm introduction in lvm.txt.
+
+
+LVM is an abstraction that provides virtualized environments for diskspace usage. This allows us to pool fragmented disk space into logical groups, that aggregate as one single disk pool. This then gets broken up into smaller partitions called Logical volume groups, acting as virtualized disk partitions.
+
+
+If we allocate more storage space or another disk to the overall storage space, we can partition those into seperate storage containers. Or, we would just add the entire disk to Volume Group.
+
+Show partitions and their respective types. 
+command: lsblk
+
+
+Create a physical volume from disk:
+command: pvcreate /dev/<disk>
+
+Remove a physical volume from disk: 
+command: pvremove /dev/<disk>
+
+Show all physical volumes on the system: 
+command: pvs
+
+Create a Volume Group: 
+command: vgcreate -s 8m vg /dev/<disk>
+
+Extend a Volume Group:
+command: vgextend vg /dev/<disk>
+
+
+
+
+
+
+
+
+
+
+
+
