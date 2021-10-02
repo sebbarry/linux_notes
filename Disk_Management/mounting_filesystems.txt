@@ -1,0 +1,61 @@
+This file overlooks the process for mounting file systems.
+
+- We typically start by creating partitions on a disk the usual way using fdisk. 
+- Once partitioned, we mount a file system for it.
+
+
+
+
+There are two types of file systems: 
+1. ext4
+2. xfs
+
+
+
+
+
+Display Available Information About Block Devices: 
+
+command: blkid
+Checking if a partition contains a file system: 
+/dev/vda3: PARTUUID="..." 
+(this does not contain a file system if there is no TYPE present or PARTUUID)
+
+
+
+
+
+Creating a File System: 
+
+command: mkfs -t <file system type> /dev/<partition>
+
+
+
+
+
+
+Mounting a File System: 
+
+We need to create directories in the /etc directory and change the fstab to reflect any changes.
+
+
+command: cd /etc
+command: mkdir <mount point name> (create the directory path for the MP)
+command: vim /etc/fstab
+
+Update the fsstab like so:
+"""
+LABEL or UUID                               Path            Type    ?        P#'s
+
+UUID="6f104aac-bfcc-4b32-9884-0fde2ccd63c2" /etc/sda2_mp    ext4    defaults 0 1
+
+"""
+
+command: mount /etc/<mount point name> (mount the file system)
+
+
+
+
+
+To List File Systems: 
+command: df -h 

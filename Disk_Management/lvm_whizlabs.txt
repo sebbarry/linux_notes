@@ -7,8 +7,11 @@ LVM is an abstraction that provides virtualized environments for diskspace usage
 If we allocate more storage space or another disk to the overall storage space, we can partition those into seperate storage containers. Or, we would just add the entire disk to Volume Group.
 
 
+
 Show partitions and their respective types. 
 command: lsblk
+
+
 
 Create a physical volume from disk:
 (this is done on a newly created disk added to the system)
@@ -23,13 +26,13 @@ command: pvs
 
 
 
-
 Volume Groups: 
-These are gruops in which we can add one or more logical or physical volumes
+These are gruops in which we can add one or more physical volumes **to**
+These are gruops in which we can add one or more logical volumes **on**
 
 Create a Volume Group: 
 (-s = physical extent size)
-command: vgcreate -s 8m vg /dev/<disk>
+command: vgcreate -s 8m <vg name> /dev/<disk>
 
 List Volume Groups: 
 command: vgs
@@ -48,7 +51,20 @@ command: vgremove <volume group name>
 
 
 
+Logical Volumes:
+Logical volumes can be added to volume groups as partitions.
 
+Creating a Logical Volume: 
+command: lvcreate --size <size> --name <lv name> <volume group name> 
+
+List Logical Volumes: 
+command: lvs
+or
+1. command: cd /dev/<volume group name>/ (check the directory of install)
+2. command: ls (whatever files in here are a logical volume link)
+
+Removing Logical Volumes: 
+command: lvremove /dev/<vg name>/<logical volume name>
 
 
 
