@@ -1,0 +1,34 @@
+Displaying and Listing the Network Manager Interfaces: 
+
+nmcli: 
+
+Shows the name, UUID, type, device:
+command: nmcli con show
+
+Shows the device status:
+command: nmcli dev status
+(green colors mean the connection is active)
+
+Delete the network connection: 
+command: nmcli con del <connection name>
+
+Add or restoring Network Connection Broadcast: 
+command: nmcli con add con-name <name> ifname <interface name> <connec type>
+
+Add local ip address: 
+command: 
+""
+nmcli con add con-name <name> ifname <name> type <type> ip4 <ipaddr>/24 gw4 <broadcast ip>
+""
+
+Show Inforamtion about Current Connection: 
+command: nmcli dev show <conenction name> 
+
+Deactivate Connection: 
+command: nmcli con down <connection name>
+
+Reactivate connection: 
+command: nmcli con up <connection name>
+
+
+
