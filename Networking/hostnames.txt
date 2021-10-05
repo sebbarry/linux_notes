@@ -1,0 +1,16 @@
+This file represents instructions for configuring hostnames on a system.
+
+How to view a hostname: 
+command: hostname
+
+How to view detail on the system: 
+command: hostnamectl
+
+Changing a systems hostname: 
+command: hostnamectl set-hostname <name of server>
+command: bash (changes the bash prompt to the new hostname)
+
+
+
+
+
