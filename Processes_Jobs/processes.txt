@@ -24,6 +24,7 @@
     - bg (background a suspended process)
     - fg (foreground a background process)
     - kill (kill a process by job number or PID)
+        -kill -9 %<job id>
     - jobs [%num] list jobs.
 
 3. Kill processes.

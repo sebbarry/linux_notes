@@ -1,0 +1,28 @@
+This file overviews how to start and stop services as well as configure how these services are run at boottime. This is an extension of other services files within this directory that also elaborate on the process.
+
+
+- A service has a status of 'disabled' indicating that it will not run automatically when the server is rebooted. 
+- Stopping an enabled service will only stop the service until the machine is rebooted. To make a service competely stop even when the system is rebooted, set the service to disabled status. 
+
+
++---------------------------------------------+
+
+
+Start a service: 
+command: systemctl start <service>
+
+
+Show every file associated with a particular sercive and check status:
+command: systemctl list-unit-files --type=service
+
+
+Make sure a service starts when a server is rebooted:
+command: systemctl get-default
+command: systemctl list-dependencies
+command: systemctl enable <service>
+
+To make sure a service does not start when the system is reboot: 
+command: systemctl disable <service>
+
+
+
