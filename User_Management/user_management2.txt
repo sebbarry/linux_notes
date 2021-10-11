@@ -41,3 +41,11 @@ example: usermod -u 1099 <user> (change a user's id)
 
 Deleting a User: 
 command: userdel <username>
+
+
+  
+
+
+
+
+
