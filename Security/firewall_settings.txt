@@ -1,0 +1,29 @@
+This file explores how to configure firewall settings:
+
++--------------------------------------------+
+
+Make sure we install the firewall manager: 
+command: sudo yum install firewalld
+command: sudo systemctl enable firewalld
+command: sudo systemctl start firewalld
+
+Show firewall details: 
+command: firewall-cmd --list-all
+
+Show firewall services: 
+command: firewall-cmd --list-services
+
+Show active network interfaces: 
+command: firewall-cmd --get-active-zones
+command: firewall-cmd --list-all --zone=public
+
+
+Add a new service: 
+command: firewall-cmd --add-service=<service>
+
+Get the active zone: 
+command: firewall-cmd --get-default-zone
+
+Set actvie zone:
+command: firewall-cmd --set-active-zone
+
