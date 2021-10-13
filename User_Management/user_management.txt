@@ -53,24 +53,19 @@ passwd sebastian (to enter a password)
 this is because we dont want the user to be able to login to the system using taht account.
 
 
-========= delete an account ===========
+- Delete an account 
 userdel -r username
-=======================================
 
-========== change an account ==============
+- Change an account 
 usermod 
-===========================================
 
-========= switching accounts ==============
-
+- Switching accounts 
 su (switches to sudo account)
 su <username> (switches to particular account)
 
++------------------------------------+
 
-===========================================
-
-
-=============== managing group details ======
+Managing Group Details 
 
 group details are found in the /etc/group file
 

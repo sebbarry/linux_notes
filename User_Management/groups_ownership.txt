@@ -1,11 +1,32 @@
+Group Creation and modification: 
+
+groups are located in the /etc/groups file
+
 - To list groups in the system: 
 getent group
+
+- To list the group(s) a user belongs to: 
+groups <user>
 
 - To create a group: 
 groupadd <groupname>
 
 - To add a user to a group: 
 usermod -G <groupname> <user>
+
+- To delete a group: 
+groupdel <groupname>
+
+- To delete a user from a group: 
+gpasswd -d <user> <user groupname>
+
+- To update a group configuration: 
+command: groupadd --help
+command: groupmod [flasgs] <groupname>
+
++----------------------------+
+
+Ownership:
 
 - To change the group ownership of a file: 
 chgrp <group> <file>
@@ -15,6 +36,10 @@ chown <user> <file>
 
 - To change the ownership of a file:  
 chown <user>:<group> <file>
+
++----------------------------+
+
+Permissions: 
 
 - To change the permission types of all files in a directory: 
 chown <user>:<group> -R <directory>
