@@ -25,6 +25,18 @@ To see a password for a user:
 command: cat /etc/shadow | grep <username>
 (:!!: means a password is not defined)
 
+Password expiration dates: 
+command: chage -l <user> (shows password information)
+command: chage -E 2020-10-14 <user> (change the expiration date of a password)
+command: chage -M <#days> <user> (change the amount of days until password reset)
+command: change -m <#days> <user> (change the minimum)
+
+To force a password change for a user: 
+command: chage -d 0 <user> (the user will have to change his/her password on next login)
+
+To remove password expiration date for a user: 
+command: chage -E -1 <user>
+
 Switch to a User: 
 command: su <username>
 
@@ -43,7 +55,21 @@ Deleting a User:
 command: userdel <username>
 
 
+
   
++------------------------------------------+
+
+Password index: 
+        
+        password hashed
+        |    [expiration dates (show them using: chage -l <user>)]
+        |    Account expires? 
+        |    |
+        |    | Minimum num days btwn password change
+        |    | | Max num days **
+        |    | | | Num days of warning before password expires.
+        |    | | | |
+user001:$6$r:0:6:4:7::
 
 
 
