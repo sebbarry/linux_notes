@@ -13,6 +13,7 @@ command: traceroute <network hostip>
 SS command (displays socket connections): 
 command: ss
 command: ss -at
+command: ss -s
 
 nmtui command (network manager text interface): 
 command: nmtui

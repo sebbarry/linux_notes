@@ -49,3 +49,5 @@ Downloading a Sofware Package without Installing It:
 command: yum/apt download <package name>
 (now to install the .dev or .rpm file)
 command: rpm -ivh <filename>
+
+

@@ -138,7 +138,7 @@ ifdown eth0
 ========== networking troubleshooting ===============
 
 1. Ping
-2. traveroute/ tracepath
+2. traceroute/ tracepath
 3. netstat
 4. tcpdump
 5. telnet
