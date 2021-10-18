@@ -66,6 +66,16 @@ command: systemctl restart rpcbind
 7. From the client machine, mount the /<name of shared> directory:
 command: mount //<ip of shared server machine>/<shared server dir export> /<client directory> -t cifs -o username=<username>,password=<pass>
 
+8. Optionally, we can add the above command to the fstab: 
+command: vi /etc/fstab
+Add to file: 
+"""
+...
+//<ip_shared>/<mountfolder> /localmount cifs credentials=...    0   0
+"""
+
+- Save the file
+- command: mount -a
 
 
 
