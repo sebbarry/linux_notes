@@ -24,7 +24,7 @@ Checking if a partition contains a file system:
 
 
 
-
+========= 1 ============
 
 Creating a File System: 
 
@@ -34,6 +34,7 @@ command: mkfs.<type> /dev/<path to partition of lvm>
 
 
 
+========= 2 ============
 
 Mounting a File System: 
 
@@ -56,6 +57,10 @@ UUID="6f104aac-bfcc-4b32-9884-0fde2ccd63c2" /etc/sda2_mp    ext4    defaults 0 1
 """
 
 command: mount /etc/<mount point name> (mount the file system)
+
+
+========================
+
 
 
 To List File Systems: 

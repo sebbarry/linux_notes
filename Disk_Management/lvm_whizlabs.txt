@@ -82,3 +82,5 @@ command: lvresize -L <size> -r /dev/<path to logical volume>
 
 
 
+** For notes on mounting a file system, refer to ../Mounting_FileSystems/mounting_filesystems.txt
+
