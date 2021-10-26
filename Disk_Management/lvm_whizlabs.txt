@@ -70,4 +70,15 @@ command: lvremove /dev/<vg name>/<logical volume name>
 
 
 
+Extending Logical Volumes: 
+command: lvextend --size +<size><G,M> -r /dev/<path to logical volume>
+
+Reducing the Logical Volumes: 
+command: lvreduce --size +<size><G,M> -r /dev/<path to logical volume>
+or
+command: lvresize -L <size> -r /dev/<path to logical volume>
+
+**Note**: For xfs file systems, we need to unmount the file system and create a new one with an appropriate size and remount it as appropriate.
+
+
 

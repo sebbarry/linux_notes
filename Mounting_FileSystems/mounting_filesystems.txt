@@ -1,6 +1,7 @@
 This file overlooks the process for mounting file systems.
 
 - We typically start by creating partitions on a disk the usual way using fdisk. 
+- Or we can create a logical volume and use that instead. 
 - Once partitioned, we mount a file system for it.
 
 
@@ -27,9 +28,9 @@ Checking if a partition contains a file system:
 
 Creating a File System: 
 
-command: mkfs -t <file system type> /dev/<partition>
-
-
+command: mkfs -t <file system type> /dev/<path to partition orlvm>
+or
+command: mkfs.<type> /dev/<path to partition of lvm>
 
 
 
@@ -39,9 +40,12 @@ Mounting a File System:
 We need to create directories in the /etc directory and change the fstab to reflect any changes.
 
 
-command: cd /etc
-command: mkdir <mount point name> (create the directory path for the MP)
-command: vim /etc/fstab
+command: 
+cd /etc
+command: 
+mkdir <mount point name> (create the directory path for the MP)
+command: 
+vim /etc/fstab
 
 Update the fsstab like so:
 """
