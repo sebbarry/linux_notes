@@ -1,14 +1,21 @@
+
+This file overviews the process for making a file system and mounting it.
+There is another file that ellaborates on this in the ../Mounting_File_System dir
+
++--------------------------------------------------------------------------------+
+
+
+
 ext = extended file system
 
-
-to create a filesystem: 
+To create a filesystem: 
 """
-mkfs -t TYPE DEVICE
+mkfs -t <TYPE> <DEVICE ie /dev/<device>>
 """
 
 mount a file system
 """
-mount /dev/sdb3 /opt
+mount <DEVICE> <MOUNT POINT>
 """
 
 
