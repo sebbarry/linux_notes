@@ -11,3 +11,14 @@ Compression:
 - either be lossy or lossless. Either has their own way of compressing on disk.
 - gzip or bzip2
 
+Some Useful Commands: 
+
+Unzip and Untar a file:
+`tar -zxvf <filename>`
+
+Untar a file:    
+`tar -xvf <filename>`
+
+Untar a file into a directory: 
+`tar -xvf <tarball> -C <target directory>`
+
