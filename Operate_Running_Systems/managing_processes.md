@@ -78,3 +78,6 @@ command: renice -n <nice value> -u <user name>
 
 
 
+Finding a PID by Port (or other networking terms): 
+command: lsof -i:<port#>
+

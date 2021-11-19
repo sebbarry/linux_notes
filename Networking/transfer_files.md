@@ -2,11 +2,15 @@ Transfering/Copying files from two servers
 
 
 scp:
+
 transfer files securely over ssh (from/to)
 Locally to remote
 command: scp -i <path/to/sshkey private> <file> <user>@<ip>:~/<dest/path> 
 Remote to local
 command: scp -i <path/to/sshkey> <user>@<ip>:~<pathtofile> <localpath>
+
+executing a local script on a remote server: 
+command: scp <user>@<remote ip> "bash -s" < localfile.sh
 
 
 sftp:
