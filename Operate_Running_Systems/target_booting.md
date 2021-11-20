@@ -17,13 +17,14 @@ runlevel 3: will allow multiple users to log into the system. (the nfs will be l
 command: ```init <runlevel #>```
 
 ### Setting the default runlevel: 
-**Note** This creates a new symlink to the appropriate run level target
-
 command: ```systemctl set-default <runlevel target>```
 
-**Note** To automatically switch over to the newly set run level target: 
+> **Note** This creates a new symlink to the appropriate run level target
+
 
 command: ```systemctl isolate <runlevel target>```
+> **Note** To automatically switch over to the newly set run level target: 
+
 
 
 ## Show the units and targets of the system.
