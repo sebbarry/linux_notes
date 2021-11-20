@@ -4,13 +4,15 @@
 ## Runlevels: 
 A preset operating state for the system. It can be booted into one of these modes at a time.
 ```
-runlevel 0: will halt and shutdown the system.
-runlevel 1: will allow a single user to log into the system.
-runlevel 2: will allow multiple users to log into the system. (the nfs system will not be loaded)
-runlevel 3: will allow multiple users to log into the system. (the nfs will be loaded)
-** 4: this is a user definable mode.
-** 5: multi user mode with a GUI
-** 6: reboots the system
+ID  Name                                   Description
+0   Halt                                   Shuts down the system.
+1   Single-user mode                       Mode for administrative tasks.
+2   Multi-user mode                        Does not configure network interfaces and does not export networks services.
+3   Multi-user mode with networking        Starts the system normally.
+4   Not used/user-definable                For special purposes.
+5   Start the system normally with         Same as runlevel 3 + display manager.
+    appropriate display manager (with GUI)                                         
+6   Reboot                                 Reboots the system.
 ```
 
 ### Setting the system runlevels: 
