@@ -59,6 +59,8 @@ command: ```mount /dev/<vg name>/<lv name> </etc/<name of new folder1>```
 use the below command to ensure that there is no issue with the newly added line to the file: 
 command: ```mount -a```
 
+</br>
+
 
 ## Mounting a xfs File System Onto a Logical Volume: 
 
@@ -77,11 +79,14 @@ command: ```mount <path to logical volume> <path to /etcfolder2>```
 
 command: ```mount -a (to check if the file has been changed correctly.)```
 
+</br>
+
 
 ## To Repair a xfs File System Type:
 > (this assumes that the file system is unmounted)
 command: ```xfs_repair <path to logical volume path>```
 
+ </br>
 
 ## Mounting a vfat file system, follow the steps above.
 command: ```mkfs.vfat ...```
