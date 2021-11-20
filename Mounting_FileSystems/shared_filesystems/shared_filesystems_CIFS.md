@@ -1,28 +1,32 @@
-This file overviews the CIFS (Common Internet File System) and how to set it up.
+# This file overviews the CIFS (Common Internet File System) and how to set it up.
 
-- The CIFS can be dedicated to the samba server. We need to have one server dedicated as the client and the other dedicated to the server (shared drive). Both use the same installation tools.
+> The CIFS can be dedicated to the samba server. We need to have one server dedicated as the client and the other dedicated to the server (shared drive). Both use the same installation tools.
 
-+-------------------------------------------------------+
+</br>
+
+## Pre-requisites: 
 
 1. Install the dnf server on both machines.
-command: dnf install -y samba samba-client cifs-utils 
+command: ```dnf install -y samba samba-client cifs-utils```
 
 
 2. When done, start the servers: 
-command: systemctl start smb
-command: systemctl status rpcbind
-command: systemctl start rpcbind
+command: ```systemctl start smb```
+
+command: ```systemctl status rpcbind```
+
+command: ```systemctl start rpcbind```
 
 
-In the server machine: 
+## In the server machine: 
 
 3. Make a directory in the root / directory of the server AND client: 
-command: cd / && mkdir /<name of shareable directory>
+command: ```cd / && mkdir /<name of shareable directory>```
 
 4. Update the conf file: smb.conf.example and make sure to overwrite the smb.conf file with the updates.
 (as an example)
 
-"""
+<pre>
 
 [global]
 workgroup = MYGROUP
@@ -47,35 +51,36 @@ valid users = <valid user from client>
 write list = <valid user from client> 
 writable = yes
 
-"""
+</pre>
 
 
 5. Test the config file and restart the smb server: 
-command: testparm
-command: systemctl restart smb
+command: ```testparm```
+command: ```systemctl restart smb```
 
-**If there's an issue with the config or restarting the service: 
-Check the log files in the /var/log/samba/ dir.
+> *If there's an issue with the config or restarting the service:*
+> Check the log files in the ```/var/log/samba/ dir```.
 
 
 
 6. Restart the smb bind server:
-command: systemctl restart rpcbind
+command: ```systemctl restart rpcbind```
 
 
 7. From the client machine, mount the /<name of shared> directory:
-command: mount //<ip of shared server machine>/<shared server dir export> /<client directory> -t cifs -o username=<username>,password=<pass>
+
+command: ```mount //<ip of shared server machine>/<shared server dir export> /<client directory> -t cifs -o username=<username>,password=<pass>```
 
 8. Optionally, we can add the above command to the fstab: 
-command: vi /etc/fstab
+command: ```vi /etc/fstab```
 Add to file: 
-"""
+<pre> 
 ...
 //<ip_shared>/<mountfolder> /localmount cifs credentials=...    0   0
-"""
+</pre>
 
 - Save the file
-- command: mount -a
+- command: ```mount -a```k
 
 
 
