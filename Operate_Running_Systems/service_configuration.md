@@ -10,28 +10,42 @@
 
 
 ### Start a service: 
-command: ```systemctl start <service>```
+```
+systemctl start <service>
+```
 
 
 ### Show every file associated with a particular service and check status:
-command: ```systemctl list-unit-files --type=service```
+```
+systemctl list-unit-files --type=service
+```
 
 
-> **Make sure a service starts when a server is rebooted:**
+**Make sure a service starts when a server is rebooted:**
 
-command: ```systemctl get-default```
-command: ```systemctl list-dependencies```
-command: ```systemctl enable <service>```
+```
+systemctl get-default
+```
+
+```
+systemctl list-dependencies
+```
+
+```
+systemctl enable <service>
+```
 
 
-> **To make sure a service does not start when the system is reboot:**
-command: ```systemctl disable <service>```
+**To make sure a service does not start when the system is reboot:**
+```
+systemctl disable <service>
+```
 
 
 
 ## Targets or run levels:
 
-> Systemd manages all services and processes in Linux. To control and manage services and processes, it uses units. A unit represents and manages an individual service or process. A target-unit is the logical collection of other system units.
+Systemd manages all services and processes in Linux. To control and manage services and processes, it uses units. A unit represents and manages an individual service or process. A target-unit is the logical collection of other system units.
 
   
 Targets are stored in the library directory: 
