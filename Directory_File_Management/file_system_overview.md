@@ -21,7 +21,7 @@ mount <device> <mount point>
 
 ### To make a mount permanent we need to mount it on:
 ```/etc/fstab``` file
-### To unmount a partition: 
+### To unmount a file system: 
 command: ```umount <filesystem>```
 
 
