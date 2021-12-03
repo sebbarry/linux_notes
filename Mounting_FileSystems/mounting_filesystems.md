@@ -34,6 +34,12 @@ command: ```mkfs -t <file system type> /dev/<path to partition orlvm>```
 command: ```mkfs.<type> /dev/<path to partition of lvm>```
 
 
+## Labeling a File System (or partition): 
+
+#### For a ext4:
+command: ```tune2fs -L "<label name>" <partition/path> ```
+#### For a xfs: 
+command: ```xfs_admin -L "<label name>" <partition/path>```
 
 ## Mounting a File System: 
 
