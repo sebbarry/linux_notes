@@ -63,7 +63,7 @@ passwd sebastian (to enter a password)
 
  **Or** 
 
-- ``` useradd -r <username> ``` 
+- ``` useradd -r -s /usr/sbin/nologin <username> ``` 
 
 This is because we dont want the user to be able to login to the system using taht account.
 
