@@ -37,4 +37,6 @@ We an also view processes using:
 ```kill -l``` (shows a list of kill signals we can use for background running processes)
 > We usually want to use ```kill -9 <pid>``` (to fully kill a pr)
 
+## View Processes by Users (who is logged in and doing what): 
+    ```w```
 
