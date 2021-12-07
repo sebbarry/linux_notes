@@ -38,5 +38,5 @@ We an also view processes using:
 > We usually want to use ```kill -9 <pid>``` (to fully kill a pr)
 
 ## View Processes by Users (who is logged in and doing what): 
-    ```w```
+```w```
 
