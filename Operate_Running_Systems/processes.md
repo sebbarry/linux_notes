@@ -23,6 +23,9 @@ We an also view processes using:
 > 
 > ```pstree```
 
+## Viewing processes/PID's and their port numbers: 
+command: ```lsof -i -P -n | grep LISTEN```
+
 ## Foreground vs background porocesses.
     
 - place an ```&``` at the end of the command line when executing a command.
