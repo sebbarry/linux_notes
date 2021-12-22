@@ -52,5 +52,8 @@ command: ```yum/apt download <package name>```
 > (now to install the .dev or .rpm file)
 > 
 command: ```rpm -ivh <filename>```
+  
+## Check if an rpm package is installed: 
+command: ```sudo rpm -qa <package>```
 
 
