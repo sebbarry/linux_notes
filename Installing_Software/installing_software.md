@@ -56,4 +56,5 @@ command: ```rpm -ivh <filename>```
 ## Check if an rpm package is installed: 
 command: ```sudo rpm -qa <package>```
 
-
+## List all of the rpm files for an installed program: 
+command: ```sudo rpm -ql nano```
