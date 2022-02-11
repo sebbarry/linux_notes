@@ -28,6 +28,16 @@ Restart=always
 WantedBy=multi-user.target
 ```
 
+Optionally, we can add timeout clauses: 
+```
+[Unit]
+StartLimitInterval=200
+StartLimitBurst=5
+[Service]
+Restart=always
+RestartSec=30
+```
+
 ## For Python specific projects which include virtual environment:
 
 ```
