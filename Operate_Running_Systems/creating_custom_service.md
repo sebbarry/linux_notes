@@ -21,7 +21,7 @@ Description=<description about this service>
 [Service]
 User=<user e.g. root>
 WorkingDirectory=<directory_of_script e.g. /root>
-ExecStart=<script which needs to be executed>
+ExecStart=<script which needs to be executed> (ie:/bin/bash -c './file.sh') 
 Restart=always
 
 [Install]
