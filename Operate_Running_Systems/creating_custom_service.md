@@ -38,6 +38,18 @@ Restart=always
 RestartSec=30
 ```
 
+If the this is a single/one-shot script execution: 
+```
+[Service]
+Type=oneshot
+ExecStart=/path/to/script.sh <start params>
+ExecStop=/path/to/script.sh <kill params>
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target
+```
+
 ## For Python specific projects which include virtual environment:
 
 ```
