@@ -34,6 +34,28 @@
 
 File creation mask determines default permissions. if no mask is users permissions would be 777 for directories and 666 for files.
 
+## Giving sudo permissions to particular groups for particular commands
+```
+sudo EDITOR=vim visudo
+```
+Add the below line to the /etc/sudoers file for a particular command.
+```
+%<group> ALL=<path/to/command>
+```
+Save the file and update the sudoers repo:
+```
+sudo  visudo -c
+```
 
-
-
+## Giving sudo permissions for a particular user for particular commands
+```
+sudo EDITOR=vim visudo
+```
+Add the below line to the /etc/sudoers file for a particular command. 
+```
+<user>  ALL=</path/to/command>
+```
+Save the file and reload visudo
+```
+sudo visudo -c
+```
