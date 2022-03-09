@@ -41,6 +41,7 @@ command: ```lvresize -L <size> -r /dev/vg/lv_1```
 
 ##  Resizing Physical Volume after Disk Adjustment
 command: ```pvs``` <- to show the pv path
+
 command: ``` pvresize /dev/<path>/<to>/<pvolume>```
     
 
