@@ -1,7 +1,7 @@
 
 # This file overviews the process we need to take to expand or shrink logical volumes with a mounted file type of ext4 or xfs.
 
-**refer to the lvm_whizlabs.txt file for more information.**
+**refer to the lvm_whizlabs.md file for more information.**
 
 ## Pre-reqs: 
 #### - Make sure to have an already existing lv partition.  
@@ -39,6 +39,10 @@ command: ```lvresize -L <size> -r /dev/vg/lv_1```
 
 
 
+##  Resizing Physical Volume after Disk Adjustment
+command: ```pvs``` <- to show the pv path
+command: ``` pvresize /dev/<path>/<to>/<pvolume>```
+    
 
 
 
