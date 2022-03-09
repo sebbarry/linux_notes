@@ -1,0 +1,5 @@
+bzip:
+
+- This is similar to the gzip command. 
+- It uses the burrows-wheeler compression algorithm.
+- It does not compress a directory.
