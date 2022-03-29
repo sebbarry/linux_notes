@@ -16,6 +16,14 @@
 [3]
 #### Add or restoring Network Connection Broadcast IP: 
 > command: ```nmcli con add con-name <name> ifname <interface name> type <connec type>```
+> ex: ``` sudo nmcli connection add type bridge autoconnect yes con-name oc4 ifname oc4 ```
+  output: nmcli con show: 
+  ```
+  NAME    UUID                                  TYPE      DEVICE
+  oc4     ccb3212c-7d04-46cc-b564-ae833767ef80  bridge    oc4
+  ens192  807d8db3-6f08-4b9b-8646-8c765351fbde  ethernet  ens192
+  virbr0  e94ec6a2-f150-49b2-9c22-58ed464f8402  bridge    virbr0
+  ```
 
 #### Add local ip address: 
 > command: 
