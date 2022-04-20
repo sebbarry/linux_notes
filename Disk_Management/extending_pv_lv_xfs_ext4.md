@@ -16,6 +16,8 @@
 
 ## Extending: 
 (make sure the file system is mounted first)
+    
+command: ``` lvdisplay``` or ``` vgdisplay ``` or ``` pvdisplay ```
 
 command: ```lvextend -l +100%FREE -r <path to device lv (/dev/vg/lv_1)>```
     
