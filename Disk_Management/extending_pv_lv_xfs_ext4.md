@@ -47,6 +47,11 @@ command: ```pvs``` <- to show the pv path
 command: ``` pvresize /dev/<path>/<to>/<pvolume>```
     
 
+## Reducing size of xfs lvm
+    
+    https://logic.edchen.org/how-to-shrink-xfs-file-system-on-enterprise-linux-7-2/
+    
+
 
 
 
