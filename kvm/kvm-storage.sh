@@ -1,6 +1,7 @@
 #!/bin/bash
 
 
+# make a large logical volume for us to store our kvm storage on.
 
 
 function createVgStorage() 
