@@ -42,4 +42,5 @@ function createStoragePoolVirsh()
     
     # list all of the pools 
     virsh pool-list
+    virsh pool-list --all --details
 }
