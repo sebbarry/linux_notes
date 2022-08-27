@@ -29,7 +29,7 @@ export PKG_CONFIG_PATH=/usr/local/lib64/pkgconfig:$PKG_CONFIG_PATH
 cd build/
 make -j$(nproc)
 make -j$(nproc) install 
-ldconfig
+sudo ldconfig
 ln -s /usr/local/snort/bin/snort /usr/sbin/snort
 /usr/local/snort/bin/snort -V
 
